@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Cantinho</title>
+  <meta name="description" content="Pagina dark para compartilhar musica e perfis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="intro-screen" class="intro-screen">
+    <div class="intro-card">
+      <p class="intro-kicker">late night</p>
+      <h2 class="intro-title">Step into the vibe.</h2>
+      <p class="intro-text">Entra e fica um pouco.</p>
+      <button id="enter-site" class="intro-button" type="button">Entrar agora</button>
+      <button id="toggle-duck" class="intro-toggle" type="button">Pato troll: off</button>
+    </div>
+  </div>
+  <div id="duck-chaser" class="duck-chaser" aria-hidden="true">
+    <span class="duck-body"></span>
+    <span class="duck-head"></span>
+    <span class="duck-beak"></span>
+    <span class="duck-eye"></span>
+    <span class="duck-feet"></span>
+  </div>
+  <div id="duck-cursor" class="duck-cursor" aria-hidden="true"></div>
+  <div class="smoke-layer" aria-hidden="true">
+    <span class="smoke smoke-1"></span>
+    <span class="smoke smoke-2"></span>
+    <span class="smoke smoke-3"></span>
+  </div>
+  <div class="rain-layer" aria-hidden="true">
+    <span class="rain-drop drop-1"></span>
+    <span class="rain-drop drop-2"></span>
+    <span class="rain-drop drop-3"></span>
+    <span class="rain-drop drop-4"></span>
+    <span class="rain-drop drop-5"></span>
+    <span class="rain-drop drop-6"></span>
+    <span class="rain-drop drop-7"></span>
+    <span class="rain-drop drop-8"></span>
+  </div>
+  <div class="ambient-layer" aria-hidden="true">
+    <span class="ambient-orb orb-1"></span>
+    <span class="ambient-orb orb-2"></span>
+    <span class="ambient-orb orb-3"></span>
+  </div>
+  <div class="particle-field" aria-hidden="true">
+    <span class="particle particle-1"></span>
+    <span class="particle particle-2"></span>
+    <span class="particle particle-3"></span>
+    <span class="particle particle-4"></span>
+    <span class="particle particle-5"></span>
+    <span class="particle particle-6"></span>
+    <span class="particle particle-7"></span>
+    <span class="particle particle-8"></span>
+    <span class="particle particle-9"></span>
+    <span class="particle particle-10"></span>
+    <span class="particle particle-11"></span>
+    <span class="particle particle-12"></span>
+  </div>
+  <div id="heart-trail" class="heart-trail" aria-hidden="true"></div>
+  <button id="pet-cat" class="pet-cat" type="button" aria-label="Fazer carinho no gatinho">
+    <span class="pet-cat-photo-wrap" aria-hidden="true">
+      <img class="pet-cat-photo" src="./download.jfif" alt="">
+    </span>
+    <span class="pet-cat-meta">
+      <span class="pet-cat-label">carinho</span>
+      <span id="pet-count" class="pet-count">0 carinhos</span>
+    </span>
+  </button>
+  <div id="pet-cat-message" class="pet-cat-message" aria-live="polite"></div>
+  <div id="heart-rain" class="heart-rain" aria-hidden="true"></div>
+  <video
+    id="kiss-cat"
+    class="kiss-cat"
+    src="./PinDown.io_@lii_564_1774936406.mp4"
+    muted
+    playsinline
+  ></video>
+  <main class="page-shell">
+    <section class="hero-card">
+      <div class="codex-signature" aria-label="Feito com Codex">
+        <span class="codex-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="codex-mark-icon">
+            <path d="M12 2.8 18.6 6.6v7.8L12 18.2 5.4 14.4V6.6Z"></path>
+            <path d="M12 6.7 15.2 8.5v3.7L12 14.1 8.8 12.2V8.5Z"></path>
+          </svg>
+        </span>
+        <span class="codex-name">Codex</span>
+      </div>
+      <div class="top-clock" aria-label="Horario atual">
+        <span id="clock-time">00:00</span>
+        <span id="clock-tagline">midnight mood</span>
+      </div>
+      <div class="hero-media">
+        <img id="cover-image" class="cover-image" src="./media/Creep%20-%20Vintage%20Postmodern%20Jukebox%20Radiohead%20Cover%20ft_%20Haley%20Reinhart.jfif" alt="Capa da musica Creep por Haley Reinhart">
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">discord profile site</p>
+        <h1>Late night<br>vibes.</h1>
+        <p class="intro">
+          Um cantinho dark com meus links principais.
+        </p>
+
+        <div class="music-panel">
+          <div class="music-info">
+            <div class="music-heading">
+              <p class="music-label">Tocando agora</p>
+              <div id="mini-eq" class="mini-eq" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <h2 id="track-name">Haley Reinhart - Creep</h2>
+            <p id="player-status">Tentando iniciar a musica automaticamente...</p>
+            <div class="timeline-block">
+              <input id="timeline-slider" class="timeline-slider" type="range" min="0" max="100" value="0">
+              <div class="timeline-meta">
+                <span id="current-time">0:00</span>
+                <span id="total-time">0:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="player-controls">
+            <button id="toggle-audio" type="button" class="primary-btn">
+              Pausar musica
+            </button>
+
+            <button id="swap-track" type="button" class="secondary-btn">
+              Trocar faixa
+            </button>
+
+            <label class="volume-control" for="volume-slider">
+              <span>Volume</span>
+              <input id="volume-slider" type="range" min="0" max="100" value="65">
+            </label>
+          </div>
+        </div>
+
+        <audio id="profile-audio" loop autoplay>
+          <source src="./media/Creep%20-%20Vintage%20Postmodern%20Jukebox%20Radiohead%20Cover%20ft.%20Haley%20Reinhart%20-%20PostmodernJukebox%20%28youtube%29.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </section>
+
+    <section class="links-grid" aria-label="Perfis">
+      <a class="profile-card" href="https://tracker.gg/valorant/profile/riot/%E9%A6%AC%E7%89%B9%E7%83%8F%E6%96%AF%232805/overview?platform=pc&playlist=competitive&season=9d85c932-4820-c060-09c3-668636d4df1b" target="_blank" rel="noreferrer">
+        <span class="card-tag">Riot</span>
+        <strong>Seu perfil Riot</strong>
+        <span>tracker</span>
+        <img class="riot-rank-image" src="./media/image.png" alt="Rank Platinum 1">
+      </a>
+
+      <a class="profile-card steam-card" href="https://steamcommunity.com/profiles/76561199011674300/" target="_blank" rel="noreferrer">
+        <span class="card-tag">Steam</span>
+        <strong>Seu perfil Steam</strong>
+        <span>Steam da lenda</span>
+        <img class="steam-mini-avatar" src="./media/e5a979d5d7d3d8dccfd24810538a25abe0750487_full.jpg" alt="Foto do perfil Steam">
+      </a>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
